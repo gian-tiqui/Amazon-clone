@@ -9,15 +9,9 @@ while (i < 10) i++;
 
 export default function App() {
   
-  return <div className="container">
-    <h1>{ i }</h1>
-  </div>;
-
-  // return (
-  // <div>
-  //   <Header />
-  //   <Meow />
-  //   <Footer />
-  // </div>
-  // );
+  return (
+    <div className="container">
+      <h1>{ i }</h1>
+    </div>
+  );
 }
