@@ -2,12 +2,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+const URL = "http://localhost:8080/question/allQuestions";
+const URL2 = "http://localhost:8080/question/allQuestions";
+
 export default function App() {
 
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/question/allQuestions")
+    axios.get(URL)
       .then(results => {
         setData(results.data);
       })
