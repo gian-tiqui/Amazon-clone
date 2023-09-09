@@ -4,6 +4,10 @@ import axios from "axios";
 
 const URL = "http://localhost:8080/question/allQuestions";
 
+const styles = {
+  cardStyle: "container p-5 m-5 bg-black text-white",
+};
+
 export default function App() {
   const [data, setData] = useState([]);
 
@@ -19,7 +23,7 @@ export default function App() {
   return (
     <div>
       {data.map((question) => (
-        <div className="container p-5 m-5 bg-black text-white">
+        <div className={styles.cardStyle}>
           <p>{question.qid}</p>
           <p>{question.question}</p>
           <p>{question.opt1}</p>
