@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const URL = "http://localhost:8080/question/allQuestions";
 
@@ -18,10 +19,15 @@ export default function App() {
         setData(results.data);
       })
       .catch((err) => console.log(err));
+
+    document.body.style.backgroundColor = "#011112";
   }, []);
 
   return (
     <div>
+      <button>
+        <Link to="/meh">meh</Link>
+      </button>
       {data.map((question) => (
         <div className={styles.cardStyle}>
           <p>{question.qid}</p>
